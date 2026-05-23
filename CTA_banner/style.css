@@ -1,0 +1,106 @@
+/* Banner layout */
+body {
+     animation: fadeOut auto linear;
+    animation-timeline: scroll(root);
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff477e, #ffc8dd);
+    background-size: 200% 200%;
+    color: white;
+    text-align: center;
+    animation: fadeUP 1s ease-out;
+    transition: background-position 0.5s ease;
+}
+
+.banner:hover {
+    background-position: 100% 0;
+}
+
+/* Banner content */
+.banner__content {
+    max-width: 600px;
+    padding: 0 5vw;
+}
+
+/* Text styling */
+.banner h1 {
+    font-size: 6vw;
+    font-family: "Segoue UI", sans-serif;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 2vw;
+    font-family: "Segoue UI", sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.banner button {
+    background-color: white;
+    color: #6c63ff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.banner button:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 8vw;
+    }
+
+    .banner p {
+        font-size: 4vw;
+    }
+
+    .banner button {
+        padding: 12 px 24 px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        flex-direction: column;
+        padding: 10vh 5vw;
+    }
+
+    .banner h1 {
+        font-size: 10vw;
+    }
+
+    .banner p {
+        font-size: 5vw;
+    }
+}
